@@ -1,6 +1,6 @@
 # Always-Learning
 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg) 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
 ![PyPI - Django Version](https://img.shields.io/pypi/djversions/djangorestframework.svg)
 ![PyPI - Status](https://img.shields.io/pypi/status/Django.svg)
 
@@ -12,17 +12,15 @@
 
 ## ⚡ Features
 
-🎯 **Multiple User Authentication** - Start with either a Teacher or a Student Account
+🎯 **Adding and Deleting Notes**
 
-🎯 **Course Creation and Enrollment** - Teacher's Create Courses and Student Enroll and are able to access information
+🎯 **To do List**
 
-🎯 **Notices/Results Creation** - Seperate Staff only access to CRUD Notices and Results
+🎯 **Search words in Dictionary**
 
-🎯 **Quizzes** - Teacher's Create Multiple Choice Quizzes and Students can take them
-  
-🎯 **Clean Tailwind UI** - Responsive design made from Tailwind CSS
-  
-🎯 **Better Admin Interface** - Staff and Admin are utilized the old Django Jet Admin rebooted for Django 3 
+🎯 **Search YouTube Video and Wikipedia**
+
+🎯 **Conversion**
 
 > Many more features that you can explore yourself
 
@@ -37,36 +35,17 @@ python@3.8 or higher
 git@2.17.1 or higher
 ```
 
-You can also use the [Zip](https://github.com/tsg-asya/portal-backend/archive/refs/heads/main.zip) file and extract the folder.
-
 ## 🔧 How To Use
 
 From your command line, clone and deploy:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/tsg-asya/portal-backend
+$ git clone https://github.com/LiArAu/Always-Learning
 
 # Go into the repository
-$ cd portal-backend
+$ cd Always-Learning
 
-# Install dependencies
-# if Pipenv available ? run
-$ pipenv install
-
-# Else
-$ pip install -r requirements.txt
-
-```
-
-## 📨 Environment Setup
-
-```bash
-# You'll need some environment variables
-touch .env
-# replace string with a random string
-SECRET_KEY={string}
-DEBUG=True
 ```
 
 ## 🛠️ Django Setup
@@ -99,11 +78,11 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Navigate to [http://localhost:8000/](http://localhost:8000/) endpoint in your browser.
+Navigate to [http://127.0.0.1:8000](http://127.0.0.1:8000) endpoint in your browser.
 
 Admin endpoint is at http://127.0.0.1:8000/admin/
 
 #### Designed & Developed by [Yajing Li](https://www.github.com/LiArAu)
 
 ## Contribute
-Found a bug, please [create an issue](https://github.com/aashutoshrathi/Student-Lifecycle-Management/issues/new)
+Found a bug, please [create an issue](https://github.com/LiArAu/Always-Learning/issues/new)

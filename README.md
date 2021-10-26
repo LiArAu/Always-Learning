@@ -8,7 +8,7 @@
 > Django based self-learning and planning portal.
 
 
-![Website Image](./showcase.PNG)
+![Website Image](./showcase.png)
 
 ## ⚡ Features
 

@@ -1,9 +1,8 @@
-# Always-Learning Django based self-learning and planning portal.
+# Always-Learning 
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
 ![PyPI - Django Version](https://img.shields.io/pypi/djversions/djangorestframework.svg)
 ![PyPI - Status](https://img.shields.io/pypi/status/Django.svg)
-
 
 <p align="center">
   <img src="./home.png" width="800" height='400'/>

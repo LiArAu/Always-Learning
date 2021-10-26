@@ -45,6 +45,10 @@ a:hover {
     color: black;
 }
 
+p {
+    margin:0;
+    padding:0;
+}
 
 
 .custom-header:hover {
@@ -61,7 +65,7 @@ a:hover {
 .nav-link:hover {
     background: black !important;
     color: white !important;
-    transition: 0.7s ease;
+    transition: 0.3s ease;
 }
 
 .icon-bar {

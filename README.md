@@ -10,7 +10,7 @@
 
 
 <p align="center">
-  <img src="./home.png" width="600" height='400'/>
+  <img src="./home.png" width="800" height='400'/>
 </p>
 
 ## ⚡ Features

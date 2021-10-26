@@ -8,7 +8,10 @@
 > Django based self-learning and planning portal.
 
 
-![Website Image](./home.png)
+
+<p align="center">
+  <img src="./home.png" width="600" height='400'/>
+</p>
 
 ## ⚡ Features
 

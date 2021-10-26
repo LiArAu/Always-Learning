@@ -81,7 +81,7 @@ def todo(request):
                 finished = True if finished == 'on' else 'False'
             except:
                 finished = False
-            todos = Todo(user = request.user, title = request.POST['title'], is_finished = finished)
+            todos = Todo(user = request.user, title = request.POST['title'], due = request.POST['due'], is_finished = finished)
             todos.save()
             messages.success(request,f'Todo Added from {request.user.username}!')
     else:
@@ -168,7 +168,7 @@ def conversion(request):
                 input = request.POST['input']
                 answer = ''
                 if input and int(input) >= 0:
-                    answer = f'{input} yard = {int(input)*3} foot' if m1=='yard' and m2 == 'foot' else f'{input} foot = {int(input)/3} yard'
+                    answer = f'{input} centimeter = {rountd(int(input)*0.3937)} inch' if m1=='centimeter' and m2 == 'inch' else f'{input} inch = {round(int(input)/0.3937)} centimeter'
                 context = {'form': form, 'm_form': next_form, 'input': True, 'answer': answer}
 
         if request.POST['measurement'] == 'mass':
@@ -180,7 +180,19 @@ def conversion(request):
                 input = request.POST['input']
                 answer = ''
                 if input and int(input) >= 0:
-                    answer = f'{input} pound = {int(input)*0.453592} kilogram' if m1=='pound' and m2 == 'kilogram' else f'{input} kilogram = {int(input)/0.453592} pound'
+                    answer = f'{input} pound = {round(int(input)*0.453592)} kilogram' if m1=='pound' and m2 == 'kilogram' else f'{input} kilogram = {round(int(input)/0.453592)} pound'
+                context = {'form': form, 'm_form': next_form, 'input': True, 'answer': answer}
+
+        if request.POST['measurement'] == 'temperature':
+            next_form = ConversionTempForm()
+            context = {'form': form, 'm_form': next_form, 'input': True}
+            if 'input' in request.POST:
+                m1 = request.POST['measure1']
+                m2 = request.POST['measure2']
+                input = request.POST['input']
+                answer = ''
+                if input and int(input) >= 0:
+                    answer = f'{input} c = {round(int(input)*9/5+32)} f' if m1=='c' and m2 == 'f' else f'{input} f = {round((int(input)-32)*5/9)} c'
                 context = {'form': form, 'm_form': next_form, 'input': True, 'answer': answer}
     else:
         form = ConversionForm()

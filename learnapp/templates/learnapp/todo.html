@@ -19,6 +19,7 @@
                 {% for todo,serial in todos %}
                 <th scope="row">{{serial}}</th>
                 <td>{{todo.title}}</td>
+                <td>{{todo.due}}</td>
                 <td>
                     <a href="{% url 'update-todo' todo.id %}">
                         <div class="form-check">

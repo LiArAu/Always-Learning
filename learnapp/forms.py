@@ -27,10 +27,10 @@ class HomeworkForm(forms.ModelForm):
 class TodoForm(forms.ModelForm):
     class Meta:
         model = Todo
-        fields = ['title','is_finished']
+        fields = ['title','due','is_finished']
 
 class ConversionForm(forms.Form):
-    CHOICES = [('length','Length'),('mass','Mass')]
+    CHOICES = [('length', 'Length'),('mass', 'Mass'), ('temperature','Temperature')]
     measurement = forms.ChoiceField(choices = CHOICES, widget = forms.RadioSelect)
 
 # Widgets should not be confused with the form fields.
@@ -40,7 +40,7 @@ class ConversionForm(forms.Form):
 # For example, different of forms.RadioSelect and forms.Select.
 
 class ConversionLengthForm(forms.Form):
-    CHOICES = [('yard','YARD'),('foot','FOOT')]
+    CHOICES = [('inch','Inch'),('centimeter','Centimeter')]
     input = forms.CharField(required = False, label = False,
             widget = forms.TextInput(attrs={'type':'number','placeholder':'Enter the Number'}))
     measure1 = forms.CharField(label = "", widget = forms.Select(choices = CHOICES))
@@ -48,6 +48,13 @@ class ConversionLengthForm(forms.Form):
 
 class ConversionMassForm(forms.Form):
     CHOICES = [('pound', 'Pound'),('kilogram', 'Kilogram')]
+    input = forms.CharField(required=False,label=False,
+            widget=forms.TextInput(attrs={'type': 'number', 'placeholder': 'Enter the Number'}))
+    measure1 = forms.CharField(label='', widget=forms.Select(choices=CHOICES))
+    measure2 = forms.CharField(label='', widget=forms.Select(choices=CHOICES))
+
+class ConversionTempForm(forms.Form):
+    CHOICES = [('c', 'C'),('f', 'F')]
     input = forms.CharField(required=False,label=False,
             widget=forms.TextInput(attrs={'type': 'number', 'placeholder': 'Enter the Number'}))
     measure1 = forms.CharField(label='', widget=forms.Select(choices=CHOICES))
